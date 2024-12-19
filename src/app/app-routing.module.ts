@@ -39,3 +39,4 @@ export const APP_ROUTES: Route[] = [
   { path: 'pagoexitoso', component: PagoexitosoComponent},
   { path: 'informacioneventos', component: PermisosdeeventoComponent}
 ];
+
