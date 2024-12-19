@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import axios, { AxiosInstance } from 'axios';
+import { environment } from '@environments/environment';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
   private axiosInstance: AxiosInstance;
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = environment.apiUrl; // Usa la URL del archivo de entorno
 
   constructor() {
     this.axiosInstance = axios.create({
@@ -14,6 +16,7 @@ export class ApiService {
     });
     console.log(this.axiosInstance.defaults);
   }
+
 
   /*
     Método genérico para manejar peticiones POST
